@@ -8,9 +8,6 @@ exports.getTopicDocuments = async (req, res) => {
   try {
     const userId = req.params.id;
     const topics = await Topic.find({ userId });
-    if (!topics || topics.length === 0) {
-      return res.status(404).send({ message: "Topics not found" });
-    }
     res.status(200).send({
       message: "Topic documents retrieved successfully",
       data: topics,
@@ -25,9 +22,6 @@ exports.getBlogDocuments = async (req, res) => {
   try {
     const userId = req.params.id;
     const blogs = await Blog.find({ userId });
-    if (!blogs || blogs.length === 0) {
-      return res.status(404).send({ message: "Blogs not found" });
-    }
     res.status(200).send({
       message: "Blog documents retrieved successfully",
       data: blogs,
@@ -42,9 +36,6 @@ exports.getEventDocuments = async (req, res) => {
   try {
     const userId = req.params.id;
     const events = await Event.find({ userId });
-    if (!events || events.length === 0) {
-      return res.status(404).send({ message: "Events not found" });
-    }
     res.status(200).send({
       message: "Event documents retrieved successfully",
       data: events,
@@ -59,9 +50,6 @@ exports.getTechDocuments = async (req, res) => {
   try {
     const userId = req.params.id;
     const techs = await Tech.find({ userId });
-    if (!techs || techs.length === 0) {
-      return res.status(404).send({ message: "Tech documents not found" });
-    }
     res.status(200).send({
       message: "Tech documents retrieved successfully",
       data: techs,
