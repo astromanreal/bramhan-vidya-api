@@ -64,9 +64,6 @@ exports.getBookDocuments = async (req, res) => {
   try {
     const userId = req.params.id;
     const books = await Book.find({ userId });
-    if (!books || books.length === 0) {
-      return res.status(404).send({ message: "Books not found" });
-    }
     res.status(200).send({
       message: "Book documents retrieved successfully",
       data: books,
