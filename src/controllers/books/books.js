@@ -2,7 +2,7 @@ const Book = require("../../models/books/bookModel");
 
 exports.getAllBooks = async (req, res) => {
   try {
-    const books = await Book.find().populate("userId");
+    const books = await Book.find();
     res.send({
       status: "success",
       count: books.length,
@@ -28,7 +28,7 @@ exports.createBook = async (req, res) => {
 
 exports.getBookById = async (req, res) => {
   try {
-    const book = await Book.findById(req.params.id).populate("userId");
+    const book = await Book.findById(req.params.id);
     if (!book) {
       return res.status(404).json({ message: "Book not found" });
     }

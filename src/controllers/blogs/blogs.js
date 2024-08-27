@@ -14,7 +14,7 @@ exports.createBlog = async (req, res) => {
 // Get all blog articles
 exports.getAllBlogs = async (req, res) => {
   try {
-    const blogs = await Blog.find().sort({ createdAt: -1 });
+    const blogs = await Blog.find();
     res.status(200).send(blogs);
   } catch (err) {
     res.status(500).send(err);
