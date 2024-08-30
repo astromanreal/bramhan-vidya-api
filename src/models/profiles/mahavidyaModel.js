@@ -50,6 +50,9 @@ const mahavidyaSchema = new mongoose.Schema(
     region: {
       type: String,
     },
+    otherNames: {
+      type: String,
+    },
     notes: [
       {
         key: String,
