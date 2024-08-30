@@ -5,7 +5,7 @@ const dbURLs = {
     "mongodb+srv://astroman6569:zCMSXHfmQ5RhpjE2@hindusim.uwrnlbv.mongodb.net/genral?retryWrites=true&w=majority",
 
   profiles:
-    "mongodb+srv://astroman6569:zCMSXHfmQ5RhpjE2@hindusim.uwrnlbv.mongodb.net/characters?retryWrites=true&w=majority",
+    "mongodb+srv://astroman6569:zCMSXHfmQ5RhpjE2@hindusim.uwrnlbv.mongodb.net/profiles?retryWrites=true&w=majority",
 
   users:
     "mongodb+srv://astroman6569:zCMSXHfmQ5RhpjE2@hindusim.uwrnlbv.mongodb.net/users?retryWrites=true&w=majority",
