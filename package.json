@@ -19,7 +19,6 @@
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.5.1",
     "nodemailer": "^6.9.14",
-    "random-avatar-generator": "^2.0.0",
     "username-generator": "^1.1.0"
   },
   "devDependencies": {

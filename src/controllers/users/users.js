@@ -3,7 +3,6 @@ const jwt = require("jsonwebtoken");
 const User = require("../../models/users/userModel");
 const usernameGenerator = require("username-generator");
 const transporter = require("../../config/email");
-const AvatarGenerator = require("random-avatar-generator").AvatarGenerator;
 
 exports.createUser = async (req, res) => {
   try {
@@ -22,14 +21,6 @@ exports.createUser = async (req, res) => {
       const otpExpiry = new Date(Date.now() + 300000); // 5-minute expiry
 
       const username = usernameGenerator.generateUsername();
-      const avatarGenerator = new AvatarGenerator();
-      const randomAvatar = avatarGenerator.generateRandomAvatar({
-        height: 200,
-        width: 200,
-        format: "png",
-      });
-      const avatarBase64 = randomAvatar.toString("base64");
-
       const hashedPassword = await bcrypt.hash(password, 10);
 
       // Send OTP via email or SMS
@@ -62,7 +53,6 @@ exports.createUser = async (req, res) => {
             username,
             email,
             password: hashedPassword,
-            avatar: avatarBase64,
             otp,
             otpExpiry,
           });
