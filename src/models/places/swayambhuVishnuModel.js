@@ -28,7 +28,6 @@ const SwayambhuVishnuSchema = new mongoose.Schema(
     },
     deity: {
       type: String,
-      // enum: ["Vishnu"],
     },
     templeName: {
       type: String,

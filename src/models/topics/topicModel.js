@@ -15,6 +15,9 @@ const topicSchema = new mongoose.Schema(
     description: {
       type: String,
     },
+    image: {
+      type: String,
+    },
     randomKeyDetails: [
       {
         key: String,
