@@ -22,10 +22,19 @@ const navaDurgaSchema = new mongoose.Schema(
     description: {
       type: String,
     },
+    otherNames: {
+      type: String,
+    },
     day: {
       type: Number,
     },
     attribute: {
+      type: String,
+    },
+    weapons: {
+      type: String,
+    },
+    mount: {
       type: String,
     },
     iconography: {
@@ -44,12 +53,6 @@ const navaDurgaSchema = new mongoose.Schema(
       type: String,
     },
     benefit: {
-      type: String,
-    },
-    festival: {
-      type: String,
-    },
-    region: {
       type: String,
     },
     notes: [
