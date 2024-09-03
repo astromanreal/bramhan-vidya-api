@@ -29,7 +29,6 @@ const bookSchema = new mongoose.Schema(
     type: String,
     author: String,
     language: String,
-    text: String,
     tags: [String],
     chapters: [chapterSchema],
     keyDetails: [
