@@ -41,8 +41,7 @@ const chiranjiviSchema = new mongoose.Schema(
       type: String,
     },
     mother: {
-      type,
-      String,
+      type: String,
     },
     father: {
       type: String,
