@@ -34,12 +34,6 @@ const chiranjiviSchema = new mongoose.Schema(
     iconography: {
       type: String,
     },
-    worshippedIn: {
-      type: String,
-    },
-    festival: {
-      type: String,
-    },
     mother: {
       type: String,
     },
