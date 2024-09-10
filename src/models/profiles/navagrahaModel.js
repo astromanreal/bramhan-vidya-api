@@ -35,7 +35,7 @@ const navagrahaSchema = new mongoose.Schema(
       type: String,
     },
     mantra: {
-      type: [String],
+      type: String,
     },
     gemstone: {
       type: String,

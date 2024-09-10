@@ -40,6 +40,13 @@ const chiranjiviSchema = new mongoose.Schema(
     festival: {
       type: String,
     },
+    mother: {
+      type,
+      String,
+    },
+    father: {
+      type: String,
+    },
     notes: [
       {
         key: String,
