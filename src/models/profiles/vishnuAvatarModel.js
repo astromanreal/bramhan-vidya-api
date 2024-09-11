@@ -40,6 +40,26 @@ const vishnuAvatarSchema = new mongoose.Schema(
     region: {
       type: String,
     },
+
+    purpose: {
+      type: String,
+    },
+    vehicle: {
+      type: String,
+    },
+    weapon: {
+      type: String,
+    },
+    mantra: {
+      type: String,
+    },
+    temple: {
+      type: String,
+    },
+    reference: {
+      type: String,
+    },
+
     notes: [
       {
         key: String,
