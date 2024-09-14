@@ -34,7 +34,7 @@ const creatureSchema = new mongoose.Schema(
     description: {
       type: String,
     },
-    feature: {
+    iconography: {
       type: String,
     },
     symbolicMeaning: {

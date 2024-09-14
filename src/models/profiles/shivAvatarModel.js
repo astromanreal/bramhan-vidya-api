@@ -11,6 +11,10 @@ const shivaAvatarSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
+    type: {
+      type: String,
+      enum: ["Forms", "Avatar"],
+    },
     views: { type: Number, default: 0 },
     userId: { type: mongoose.Schema.Types.ObjectId, required: true },
     image: {
