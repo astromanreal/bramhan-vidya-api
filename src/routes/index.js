@@ -7,6 +7,9 @@ const books = require("./bookRoutes");
 const tech = require("./techRoutes");
 const events = require("./eventRoutes");
 const blogs = require("./blogRoutes");
+const organisations = require("./organisationRoutes");
+const festivals = require("./festivalRoutes");
+const temples = require("./templeRoutes");
 
 module.exports = {
   profiles,
@@ -18,4 +21,7 @@ module.exports = {
   tech,
   events,
   blogs,
+  organisations,
+  festivals,
+  temples,
 };

@@ -30,6 +30,15 @@ const dbURLs = {
 
   blogs:
     "mongodb+srv://astroman6569:zCMSXHfmQ5RhpjE2@hindusim.uwrnlbv.mongodb.net/blogs?retryWrites=true&w=majority",
+
+  organisations:
+    "mongodb+srv://astroman6569:zCMSXHfmQ5RhpjE2@hindusim.uwrnlbv.mongodb.net/organisations?retryWrites=true&w=majority",
+
+  festivals:
+    "mongodb+srv://astroman6569:zCMSXHfmQ5RhpjE2@hindusim.uwrnlbv.mongodb.net/festivals?retryWrites=true&w=majority",
+
+  temples:
+    "mongodb+srv://astroman6569:zCMSXHfmQ5RhpjE2@hindusim.uwrnlbv.mongodb.net/temples?retryWrites=true&w=majority",
 };
 
 const createConnection = (url) => {
@@ -47,6 +56,9 @@ const bookConnection = createConnection(dbURLs.books);
 const techConnection = createConnection(dbURLs.technology);
 const eventConnection = createConnection(dbURLs.events);
 const blogConnection = createConnection(dbURLs.blogs);
+const organisationConnection = createConnection(dbURLs.organisations);
+const festivalConnection = createConnection(dbURLs.festivals);
+const templeConnection = createConnection(dbURLs.temples);
 
 const connections = [
   { name: "User", connection: userConnection },
@@ -58,6 +70,9 @@ const connections = [
   { name: "Technology", connection: techConnection },
   { name: "Event", connection: eventConnection },
   { name: "Blog", connection: blogConnection },
+  { name: "Organisation", connection: organisationConnection },
+  { name: "Festival", connection: festivalConnection },
+  { name: "Temple", connection: templeConnection },
 ];
 
 connections.forEach((conn) => {
@@ -93,6 +108,9 @@ const closeConnections = async () => {
     await techConnection.close();
     await eventConnection.close();
     await blogConnection.close();
+    await organisationConnection.close();
+    await festivalConnection.close();
+    await templeConnection.close();
     console.log("All connections closed!");
   } catch (error) {
     console.error("Error closing connections:", error);
@@ -114,4 +132,7 @@ module.exports = {
   techConnection,
   eventConnection,
   blogConnection,
+  organisationConnection,
+  festivalConnection,
+  templeConnection,
 };

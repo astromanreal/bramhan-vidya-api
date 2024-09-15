@@ -29,6 +29,9 @@ app.use("/books", routes.books);
 app.use("/tech", routes.tech);
 app.use("/event", routes.events);
 app.use("/blogs", routes.blogs);
+app.use("/organisations", routes.organisations);
+app.use("/festivals", routes.festivals);
+app.use("/temples", routes.temples);
 
 app.use((err, req, res, next) => {
   console.error(err);
