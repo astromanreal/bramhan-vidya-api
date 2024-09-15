@@ -24,13 +24,22 @@ const ramayanaSchema = new mongoose.Schema(
     },
     role: {
       type: String,
-      enum: ["Prince", "King", "Sage", "Demon", "Vanara", "Others"],
-    },
-    affiliation: {
-      type: String,
+      enum: [
+        "Prince",
+        "King",
+        "Sage",
+        "Demon",
+        "Vanara",
+        "Ram Family",
+        "Ravan Family",
+        "Others",
+      ],
     },
     family: {
-      type: String,
+      mother: { type: String },
+      father: { type: String },
+      spouse: { type: String },
+      children: { type: String },
     },
     skill: {
       type: String,
@@ -42,12 +51,6 @@ const ramayanaSchema = new mongoose.Schema(
       type: String,
     },
     associatedCharacter: {
-      type: String,
-    },
-    worship: {
-      type: String,
-    },
-    festival: {
       type: String,
     },
     iconography: {
