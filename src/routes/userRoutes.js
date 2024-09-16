@@ -14,6 +14,7 @@ const {
 const {
   getProfileDocumentsByUserId,
   getProfileFeed,
+  searchProfiles,
 } = require("../controllers/users/ProfileDoc");
 const {
   getPlaceDocumentsByUserId,
@@ -43,6 +44,7 @@ router.delete("/deleteuser/:id", deleteUser);
 
 // user doc
 router.get("/allprofiledoc/:id", getProfileDocumentsByUserId);
+router.get("/search-profiles", searchProfiles);
 router.get("/allplacedoc/:id", getPlaceDocumentsByUserId);
 
 // all docs

@@ -65,3 +65,27 @@ exports.getProfileFeed = async (req, res) => {
       .json({ success: false, message: "Failed to fetch profiles" });
   }
 };
+
+exports.searchProfiles = async (req, res) => {
+  try {
+    const query = req.query.query.toLowerCase();
+    const profiles = [];
+
+    // Search in each model
+    for (const model of models) {
+      const docs = await model
+        .find({
+          $or: [{ name: { $regex: query, $options: "i" } }],
+        })
+        .lean();
+      profiles.push(...docs);
+    }
+
+    res.json({ success: true, data: profiles });
+  } catch (error) {
+    console.error("Error searching profiles:", error);
+    res
+      .status(500)
+      .json({ success: false, message: "Failed to search profiles" });
+  }
+};
